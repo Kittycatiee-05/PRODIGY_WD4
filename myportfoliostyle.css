@@ -1,93 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-    <section id="about">
-        <div class="container">
-            <h2>Sejal Dhadve</h2>
-            <p>Hello! I'm a passionate web developer with a knack for creating beautiful and functional websites. I specialize in front-end development and have experience with various web technologies.</p>
-        </div>
-    </section>
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <img src="C:\prodigy\!mysiteDOCTYPE.html" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>A brief description of Project 1. Create an interactive navigation menu.
-The goal of the task is to create an interactive navigation menu that changes color or style when scrolled or when hovering over a menu item. the navigation menu should have a fixed postion and be visible on all pages. use html to structure the menu, css to style it and javascript to add interactivity such as changing the background color or font color of the menu when it is scrolled or when a menu item is hovered over.</p>
-                </div>
-                <div class="project-item">
-                    <img src="C:\prodigy\stopwatch.html" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>A brief description of Project 2. To build a stopwatch web application
-The task involved building a stopwatch web application using HTML, CSS, and JavaScript. The application's objective was to provide users with the ability to accurately measure and record time intervals by implementing functions for starting, pausing, resetting the stopwatch, and tracking and displaying lap times.</p>
-                </div>
-                <div class="project-item">
-                    <img src="C:\prodigy\tictactoegame.html" alt="Project 3">
-                    <h3>Project 3</h3>
-                    <p>A brief description of Project 3. The task is to build a tic-tac-toe web application using HTML, CSS, and JavaScript. The application should allow users to play against each other or against an AI opponent. Key functionalities include handling user clicks, tracking game state, and checking for winning conditions.</p>
-                </div>
-                <div class="project-item">
-                    <img src="images/project4.jpg" alt="Project 4">
-                    <h3>Project 3</h3>
-                    <p>A brief description of Project 4. Create a personal portfolio website to showcase your expertise as a web developer. The website should feature an attractive design that captivates visitors, with sections such as a homepage with a captivating headline and professional photo, a summary of your skills, and an "About Me" section detailing your background, education, and professional experience.</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </div>
-    </section>
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1em;
+}
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" cols="30" rows="1" placeholder="Your message"></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+header h1 {
+    margin: 0;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+nav ul li {
+    margin-left: 1em;
+}
 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 
+section {
+    padding: 2em 0;
+    margin-top: 60px;
+}
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1em;
+}
 
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.project-item {
+    flex: 1 1 calc(33% - 1em);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1em;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 1em;
+    padding: 0.75em;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: blue;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
 
 
